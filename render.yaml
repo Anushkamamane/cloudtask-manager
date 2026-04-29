@@ -1,0 +1,8 @@
+services:
+  - type: static
+    name: cloudtask-manager
+    buildCommand: npm install && CI=false npm run build
+    publishDirectory: build
+    envVars:
+      - key: CI
+        value: false
